@@ -5,32 +5,29 @@
 
 
 const olArr = [
-    { month: 1, total:  90}, { month: 2, total:  87}, { month: 3, total: 140},
-    { month: 4, total: 120}, { month: 5, total: 130}, { month: 6, total: 150},
-    { month: 7, total: 180}, { month: 8, total: 240}, { month: 9, total: 200},
-    { month:10, total: 180}, { month:11, total: 140}, { month:12, total: 190}
+    [{ month: 1, total:  90}, { month: 2, total:  87}, { month: 3, total: 140}],
+    [{ month: 4, total: 120}, { month: 5, total: 130}, { month: 6, total: 150}],
+    [{ month: 7, total: 180}, { month: 8, total: 240}, { month: 9, total: 200}],
+    [{ month:10, total: 180}, { month:11, total: 140}, { month:12, total: 190}]
 ]
 
+// console.log(olArr[0][0].total)
+// console.log(olArr.length)
 
-let tempArr = []
+const pArr = []
+
+
 for (let i = 0; i < olArr.length; i++) {
-    tempArr.push(olArr[i].total)
+    const tempArr = olArr[i].total
+
+
+    // let sum = 0
+    // for (let j = 0; j < tempArr.length; j++) {
+    //     sum += tempArr[j]
+    //
+    // }
+    // const tempAvg = (sum/tempArr.length).toFixed(2)
+    // pArr.push(parseFloat(tempAvg))
+    //     console.log(pArr)
 }
 
-// temp1avg = (tempArr[0] + tempArr[1] + tempArr[2] / 3).toFixed()
-// console.log(temp1avg)
-//
-// temp2avg = (tempArr[3] + tempArr[4] + tempArr[5] / 3).toFixed()
-// console.log(temp1avg)
-//
-// temp3avg = (tempArr[6] + tempArr[7] + tempArr[8] / 3).toFixed()
-// console.log(temp1avg)
-//
-// temp4avg = (tempArr[9] + tempArr[10] + tempArr[11] / 3).toFixed()
-// console.log(temp1avg)
-
-for (let i = 0; i < 3; i = i + 3) {
-
-    let temp1avg = (tempArr[i] + tempArr[i+1] + tempArr[i+2] / 3).toFixed()
-
-}
