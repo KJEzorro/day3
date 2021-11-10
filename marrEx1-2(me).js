@@ -24,16 +24,16 @@ for (let i = 0; i < arr.length; i++) {
 }
 console.log(pArr)
 
-// 최고 매출 금액 찾기(분기로)
-//
-// let max = 0
-// let period = 0
-// for (let i = 0; i < pArr.length; i++) {
-//     if(pArr[i] > max) {
-//         max = pArr[i]
-//         period = i
-//     }
-//
-// }
-// console.log(`최고 분기 평균 매출액: ${max}`)
-// console.log(`${period + 1} 분기 입니다.`)
+
+
+let max = 0
+let period = 0
+for (let i = 0; i < pArr.length; i++) {
+    if(pArr[i] > max) {
+        max = pArr[i]
+        period = i
+    }
+
+}
+console.log(`최고 분기 평균 매출액: ${max}`)
+console.log(`${period + 1} 분기 입니다.`)
