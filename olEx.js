@@ -22,7 +22,7 @@ for (let i = 0; i < olArr.length; i++) {
         sum += temArr[j].total
 
     }
-    console.log(`분기별 총합:${sum}`)
+    console.log(`${i+1}분기 총합:${sum}`)
     const tempAvg = (sum/temArr.length).toFixed(2)
     parr.push(parseInt(tempAvg))
 }
@@ -31,6 +31,44 @@ console.log("----------------")
 
 // 분기별 평균
 for (let i = 0; i < parr.length; i++) {
-    console.log(`분기별 평균: ${parr[i]}`)
-
+    console.log(`${i+1}분기 평균: ${parr[i]}`)
 }
+console.log("----------------")
+
+// 분기중 최대값
+let max = 0
+let quarter = 0
+let maxMonth = 0
+for (let i = 0; i < olArr.length; i++) {
+    const temArr = olArr[i]
+    for (let j = 0; j < temArr.length; j++) {
+        let mTotal = temArr[j].total
+        if (mTotal > max) {
+            max = mTotal
+            quarter = i
+            maxMonth = temArr[j].month
+        }
+    }
+}
+
+console.log(`분기중 최대값: ${quarter + 1}분기 ${maxMonth}월 ${max}`)
+console.log("----------------")
+
+// 분기중 최소값
+let min = max
+let quarter2 = 0
+let minMonth = 0
+for (let i = 0; i < olArr.length; i++) {
+    const temArr = olArr[i]
+    for (let j = 0; j < temArr.length; j++) {
+        let mTotal = temArr[j].total
+        if (mTotal < min) {
+            min = mTotal
+            quarter2 = i
+            minMonth = temArr[j].month
+        }
+    }
+}
+console.log(`분기중 최소값: ${quarter2 + 1}분기 ${minMonth}월 ${min}`)
+console.log("----------------")
+
