@@ -16,18 +16,19 @@ const olArr = [
 
 const pArr = []
 
+// console.log(olArr[0][0].total)
+// console.log(olArr[0][1].total)
+// console.log(olArr[0][2].total)
 
 for (let i = 0; i < olArr.length; i++) {
-    const tempArr = olArr[i].total
 
 
-    // let sum = 0
-    // for (let j = 0; j < tempArr.length; j++) {
-    //     sum += tempArr[j]
-    //
-    // }
-    // const tempAvg = (sum/tempArr.length).toFixed(2)
-    // pArr.push(parseFloat(tempAvg))
-    //     console.log(pArr)
+
+    let sum = 0
+    for (let j = 0; j < olArr[i].length; j++) {
+    sum += olArr[i][j].total
+
+
+    }
+console.log(sum)
 }
-

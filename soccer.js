@@ -1,10 +1,10 @@
 // ca : center area heatmap , pa : penelty area heatmap F : forward, M : midfielder
 const heatMap = [
-    {ca : 4, pa : 8, category : 'F' },
-    {ca : 3, pa : 11, category : 'F' },
-    {ca : 2, pa : 18, category : 'F' },
+    {ca :  4, pa :  8, category : 'F' },
+    {ca :  3, pa : 11, category : 'F' },
+    {ca :  2, pa : 18, category : 'F' },
     {ca : 18, pa : 12, category : 'M' },
-    {ca : 15, pa : 4, category : 'M' }
+    {ca : 15, pa :  4, category : 'M' }
 ]
 
 const target = {ca : 12, pa : 5}
