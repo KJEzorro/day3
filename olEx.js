@@ -2,7 +2,7 @@
 // 2. 가장 매출이 좋았던 분기
 
 
-
+const parr = []
 
 const olArr = [
     [{ month: 1, total:  90}, { month: 2, total:  87}, { month: 3, total: 140}],
@@ -11,24 +11,26 @@ const olArr = [
     [{ month:10, total: 180}, { month:11, total: 140}, { month:12, total: 190}]
 ]
 
-// console.log(olArr[0][0].total)
-// console.log(olArr.length)
 
-const pArr = []
 
-// console.log(olArr[0][0].total)
-// console.log(olArr[0][1].total)
-// console.log(olArr[0][2].total)
-
+// 분기별 총합
 for (let i = 0; i < olArr.length; i++) {
-
-
+    const temArr = olArr[i]
 
     let sum = 0
-    for (let j = 0; j < olArr[i].length; j++) {
-    sum += olArr[i][j].total
-
+    for (let j = 0; j < temArr.length; j++) {
+        sum += temArr[j].total
 
     }
-console.log(sum)
+    console.log(`분기별 총합:${sum}`)
+    const tempAvg = (sum/temArr.length).toFixed(2)
+    parr.push(parseInt(tempAvg))
+}
+
+console.log("----------------")
+
+// 분기별 평균
+for (let i = 0; i < parr.length; i++) {
+    console.log(`분기별 평균: ${parr[i]}`)
+
 }
